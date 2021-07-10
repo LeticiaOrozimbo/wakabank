@@ -9,7 +9,7 @@ public class Programa {
         System.out.println("WAKABANK - O SEU BANCO NEGRO");
         System.out.println("\nVenha planejar seu futuro com nosso WAKABANK");
         
-        
+        System.out.println("Teste");
 	}
 
 }
