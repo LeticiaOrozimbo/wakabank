@@ -98,5 +98,27 @@ public class Conta {
 		this.saldo = saldo;
 	}
 	
+	//Método deposito com um parametro para receber um valor
+	public void Deposito(double valor) {
+		saldo+=valor;
+		System.out.println("Saldo disponivel: " + saldo);
+	}
+	
+	//Método saque
+	public void Saque(int valor) {
+		if(valor<=saldo) {
+			
+			saldo-=valor;
+			System.out.println("Saque concluido com sucesso \nSaldo: " + saldo);
+			
+		}else {
+			System.out.println("Você não tem valor suficiente para saque! \nSaldo: " + saldo);
+			
+			
+		}
+		
+		
+	}
+	
 	
 }
