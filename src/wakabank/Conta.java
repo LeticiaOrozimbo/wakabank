@@ -25,6 +25,17 @@ public class Conta {
 		this.saldo = saldo;
 		
 	}
+	
+	public Conta(int numConta, int numAgencia, String nomeTitular, String endereco, int numTelefone, String email, double saldo) {
+		super();
+		this.numConta = numConta;
+		this.numAgencia = numAgencia;
+		this.nomeTitular = nomeTitular;
+		this.endereco = endereco;
+		this.numTelefone = numTelefone;
+		this.email = email;
+		this.saldo = saldo;
+	}
 
 	public int getNumConta() {
 		return numConta;
