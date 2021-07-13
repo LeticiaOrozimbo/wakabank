@@ -12,8 +12,7 @@ public class ContaEmpresarial extends Conta{
 		super(numConta, numAgencia,nomeTitular,endereco,numTelefone,email,saldo);
 		this.CNPJ = CNPJ;
 		this.nomeEmpresa = nomeEmpresa;
-		this.taxa = taxa;
-			
+		this.taxa = taxa;	
 	}
 
 	public String getCNPJ() {
