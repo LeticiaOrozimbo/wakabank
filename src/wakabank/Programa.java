@@ -1,6 +1,10 @@
 package wakabank;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import wakabank.ContaEmpresarial;
 
 public class Programa {
 	
@@ -10,12 +14,15 @@ public class Programa {
 		// TODO Auto-generated method stub
 		
 		int escolha; 
-		int agencia; 
+		 
 		int conta;
 		int op;
 		
-		Conta wakaconta = new Conta(0001,1009,"Michele","12345","4567","Rua Flores",3789,"m@89mil.com", 78099);
-        
+		List<ContaEmpresarial> contaEmpresarial = new ArrayList<ContaEmpresarial>();
+		//int numConta, int numAgencia, String nomeTitular,String endereco, int numTelefone, String email, double saldo,String CNPJ, String nomeEmpresa
+	    ContaEmpresarial wakaconta = new ContaEmpresarial(1001,1009,"Michele","Rua Flores",12345,"m@89mil.com",78099.0,"232313567","Docinhos Doces");
+        contaEmpresarial.add(wakaconta);
+		
         System.out.println("WAKABANK - O SEU BANCO NEGRO");
         System.out.println("\nVenha planejar seu futuro com nosso WAKABANK");
         
@@ -27,6 +34,10 @@ public class Programa {
         System.out.println(" Opção 1 - Sim");
         System.out.println(" Opção 2 - Não");
         escolha = leia.nextInt();
+        if(!(escolha==1 || escolha==2)) {
+        	System.out.println("Essa opção não existe, digite novamente.");
+        }
+        System.out.println();
         }while (!(escolha==1 || escolha==2));
         
         // Aqui é nosso menu de opções 

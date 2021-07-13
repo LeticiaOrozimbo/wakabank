@@ -1,16 +1,17 @@
 package wakabank;
 
-public class Conta {
+public abstract class Conta {
 	
-	private int numConta;
-	private int numAgencia;
-	private String nomeTitular;
-	private String numRG;
-	private String numCPF;
-	private String endereco;
-	private int numTelefone;
-	private String email;
-	private double saldo;
+	
+	protected int numConta;
+	protected int numAgencia;
+	protected String nomeTitular;
+	protected String numRG;
+	protected String numCPF;
+	protected String endereco;
+	protected int numTelefone;
+	protected String email;
+	protected double saldo;
 	
 	public Conta(int numConta, int numAgencia, String nomeTitular, String numRG, String numCPF, String endereco, int numTelefone, String email, double saldo) {
 		super();
@@ -36,7 +37,9 @@ public class Conta {
 		this.email = email;
 		this.saldo = saldo;
 	}
-
+	
+	
+    //Implementação dos métodos getters e setters da Interface
 	public int getNumConta() {
 		return numConta;
 	}
@@ -109,27 +112,25 @@ public class Conta {
 		this.saldo = saldo;
 	}
 	
-	//Método deposito com um parametro para receber um valor
-	public void Deposito(double valor) {
-		saldo+=valor;
-		System.out.println("Saldo disponivel: " + saldo);
-	}
-	
-	//Método saque
-	public void Saque(int valor) {
-		if(valor<=saldo) {
+	//Método Saque previamente implementado
+	public void Saque(double valor)
+	{
+		if(getSaldo() != 0 && getSaldo() <= valor) {
 			
-			saldo-=valor;
-			System.out.println("Saque concluido com sucesso \nSaldo: " + saldo);
+			setSaldo(getSaldo()-valor);
 			
-		}else {
-			System.out.println("Você não tem valor suficiente para saque! \nSaldo: " + saldo);
-			
-			
+		} else {
+			System.out.println("Você não tem saldo para saque");
 		}
 		
 		
+	}	
+	
+	//Método Deposito previamente implementado
+	public void Deposito(double valor) 
+	{
 	}
+	
 	
 	
 }

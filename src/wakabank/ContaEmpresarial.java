@@ -1,20 +1,21 @@
 package wakabank;
 
-public class ContaEmpresarial extends Conta{
+public class ContaEmpresarial extends Conta implements FuncoesConta {
 	
 	private String CNPJ;
 	private String nomeEmpresa;
 	private double taxa=0.05;
 	
 	
-	public ContaEmpresarial(int numConta, int numAgencia, String nomeTitular,String endereco, int numTelefone, String email, double saldo,String CNPJ, String nomeEmpresa,double taxa)
+	public ContaEmpresarial(int numConta, int numAgencia, String nomeTitular,String endereco, int numTelefone, String email, double saldo,String CNPJ, String nomeEmpresa)
 	{
 		super(numConta, numAgencia,nomeTitular,endereco,numTelefone,email,saldo);
 		this.CNPJ = CNPJ;
 		this.nomeEmpresa = nomeEmpresa;
-		this.taxa = taxa;	
 	}
-
+	
+	
+    //Implementação dos métodos getters e setters dos atributos específicos da conta empresarial
 	public String getCNPJ() {
 		return CNPJ;
 	}
@@ -36,22 +37,16 @@ public class ContaEmpresarial extends Conta{
 	}
 	
 	@Override
-	public void Saque(int valor)
+	public void Saque(double valor)
 	{
-		
-		if(valor<=getSaldo()) {
-			
-			System.out.println(getTaxa()*valor);
-			
-			setSaldo(getSaldo()-valor);
-			System.out.println("Saque concluido com sucesso \nSaldo: " + getSaldo());
-			
-		}else {
-			System.out.println("Você não tem valor suficiente para saque! \nSaldo: " + getSaldo());
-			
-		    
+	}
+	
+	@Override
+	public void Deposito(double valor)
+	{
 		
 	}
 	
 }
-}
+
+
