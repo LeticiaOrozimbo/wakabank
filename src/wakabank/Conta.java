@@ -13,10 +13,11 @@ public abstract class Conta {
 	protected String email;
 	protected double saldo;
 	
-	public Conta(int numConta, int numAgencia, String nomeTitular, String numRG, String numCPF, String endereco, int numTelefone, String email, double saldo) {
+	
+	public Conta(int numAgencia, int numConta, String nomeTitular, String numRG, String numCPF, String endereco, int numTelefone, String email, double saldo) {
 		super();
-		this.numConta = numConta;
 		this.numAgencia = numAgencia;
+		this.numConta = numConta;
 		this.nomeTitular = nomeTitular;
 		this.numRG = numRG;
 		this.numCPF = numCPF;
@@ -27,10 +28,10 @@ public abstract class Conta {
 		
 	}
 	
-	public Conta(int numConta, int numAgencia, String nomeTitular, String endereco, int numTelefone, String email, double saldo) {
+	public Conta(int numAgencia,int numConta, String nomeTitular, String endereco, int numTelefone, String email, double saldo) {
 		super();
-		this.numConta = numConta;
 		this.numAgencia = numAgencia;
+		this.numConta = numConta;
 		this.nomeTitular = nomeTitular;
 		this.endereco = endereco;
 		this.numTelefone = numTelefone;
@@ -112,6 +113,8 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 	
+
+	
 	//Método Saque previamente implementado
 	public void Saque(double valor)
 	{
@@ -129,6 +132,8 @@ public abstract class Conta {
 	//Método Deposito previamente implementado
 	public void Deposito(double valor) 
 	{
+		saldo+=valor;
+		System.out.println("Saldo disponivel: " + saldo);
 	}
 	
 	

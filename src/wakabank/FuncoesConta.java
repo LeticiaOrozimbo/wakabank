@@ -27,6 +27,7 @@ public interface FuncoesConta {
 	public void setEmail(String email);
 	public String getEndereco();
 	public void setEndereco(String endereco);
+    
 	
 
 	
