@@ -20,7 +20,7 @@ public class Programa {
 		int contaseguranca = 0;
 		ContaEmpresarial contaEmpresa = null;
 		ContaFisica contaFisica = null;
-		DecimalFormat df = new DecimalFormat("R$ ###,###.00");
+		DecimalFormat df = new DecimalFormat("R$ ###,###.##");
 
 		// ContaFisica contaCliente;
 
@@ -160,7 +160,15 @@ public class Programa {
 
 					break;
 				case 3: // terminar quando aprendermos list
-					System.out.println("\n  ");
+					System.out.println("\n Digite o valor deseja sacar:  ");
+					double valorSaque = leia.nextDouble();
+					
+					if (contaEmpresa != null) {
+						contaEmpresa.Saque(valorSaque);
+					} else {
+						contaFisica.Saque(valorSaque);
+					}
+					
 					break;
 
 				case 4: // dicas financeiras

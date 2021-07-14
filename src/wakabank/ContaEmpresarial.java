@@ -37,11 +37,6 @@ public class ContaEmpresarial extends Conta implements FuncoesConta {
 	}
 
 	
-	@Override
-	public void Saque(double valor)
-	{
-	}
-	
 	
 	
 }

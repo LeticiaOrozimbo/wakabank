@@ -116,15 +116,16 @@ public abstract class Conta {
 
 	
 	//Método Saque previamente implementado
-	public void Saque(double valor)
+	public double Saque(double valor)
 	{
-		if(this.saldo != 0 && this.saldo <= valor) {
+		if(this.saldo != 0 && this.saldo >= valor) {
 			
-			this.saldo-=valor;			
+			this.saldo-=valor;
+			
 		} else {
 			System.out.println("Você não tem saldo para saque");
 		}
-		
+		return this.saldo;
 		
 	}	
 	

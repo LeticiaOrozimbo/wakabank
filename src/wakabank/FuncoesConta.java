@@ -6,7 +6,7 @@ public interface FuncoesConta {
 	public double Deposito(double valor);
 	
 	//Método saque com um parametro para receber um valor
-	public void Saque(double valor);
+	public double Saque(double valor);
 	
 	//Métodos getters e setters obrigatorios para todas as contas
 	public int getNumConta();
