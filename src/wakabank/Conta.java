@@ -118,10 +118,9 @@ public abstract class Conta {
 	//Método Saque previamente implementado
 	public void Saque(double valor)
 	{
-		if(getSaldo() != 0 && getSaldo() <= valor) {
+		if(this.saldo != 0 && this.saldo <= valor) {
 			
-			setSaldo(getSaldo()-valor);
-			
+			this.saldo-=valor;			
 		} else {
 			System.out.println("Você não tem saldo para saque");
 		}
@@ -130,10 +129,12 @@ public abstract class Conta {
 	}	
 	
 	//Método Deposito previamente implementado
-	public void Deposito(double valor) 
+	public double Deposito(double valor) 
 	{
-		saldo+=valor;
-		System.out.println("Saldo disponivel: " + saldo);
+       
+		this.saldo+=valor;
+		
+		return this.saldo;
 	}
 	
 	

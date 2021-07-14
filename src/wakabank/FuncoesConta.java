@@ -3,7 +3,7 @@ package wakabank;
 public interface FuncoesConta {
 	
 	//Método deposito com um parametro para receber um valor
-	public void Deposito(double valor);
+	public double Deposito(double valor);
 	
 	//Método saque com um parametro para receber um valor
 	public void Saque(double valor);

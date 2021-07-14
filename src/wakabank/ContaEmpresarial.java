@@ -42,11 +42,7 @@ public class ContaEmpresarial extends Conta implements FuncoesConta {
 	{
 	}
 	
-	@Override
-	public void Deposito(double valor)
-	{
-		
-	}
+	
 	
 }
 
