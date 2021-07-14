@@ -4,9 +4,7 @@ public class ContaEmpresarial extends Conta implements FuncoesConta {
 	
 	private String CNPJ;
 	private String nomeEmpresa;
-	private double taxa=0.05;
-	
-	
+
 	public ContaEmpresarial(int numAgencia, int numConta, String nomeTitular,String endereco, int numTelefone, String email, double saldo,String CNPJ, String nomeEmpresa)
 	{
 		super(numAgencia,numConta,nomeTitular,endereco,numTelefone,email,saldo);
@@ -32,9 +30,6 @@ public class ContaEmpresarial extends Conta implements FuncoesConta {
 		this.nomeEmpresa = nomeEmpresa;
 	}
 	
-	public double getTaxa() {
-		return taxa;
-	}
 	
 	@Override
 	public double Doacao(double valor) 

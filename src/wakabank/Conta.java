@@ -13,7 +13,7 @@ public abstract class Conta {
 	protected String email;
 	protected double saldo;
 	
-	
+	//construtor para criar conta empresarial
 	public Conta(int numAgencia, int numConta, String nomeTitular, String numRG, String numCPF, String endereco, int numTelefone, String email, double saldo) {
 		super();
 		this.numAgencia = numAgencia;
@@ -28,6 +28,7 @@ public abstract class Conta {
 		
 	}
 	
+	//construtor para criar conta fisica
 	public Conta(int numAgencia,int numConta, String nomeTitular, String endereco, int numTelefone, String email, double saldo) {
 		super();
 		this.numAgencia = numAgencia;
