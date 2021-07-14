@@ -35,9 +35,27 @@ public class ContaEmpresarial extends Conta implements FuncoesConta {
 	public double getTaxa() {
 		return taxa;
 	}
-
 	
+	@Override
+	public double Doacao(double valor) 
+	{
+		if(valor!=0 && valor<=saldo) 
+		{
+			super.Saque(valor);
+			valor = valor*0.5 + valor;
+			
+		}
 	
+		else 
+		{
+			System.out.println("\nVoce não tem saldo suficente para doar!!! ");
+		}
+		
+		return valor;
+	
+	}
+		
+			
 	
 }
 

@@ -8,6 +8,22 @@ public class ContaFisica extends Conta implements FuncoesConta {
 
 	}
 	
+	@Override
+	public double Doacao(double valor) 
+	{
+		if(valor!=0 && valor<=saldo) 
+		{
+			super.Saque(valor);
+			valor = valor*0.25 + valor;
+		}
 	
+		else 
+		{
+			System.out.println("\nVoce não tem saldo suficente para doar!!! ");
+		}
+		
+		return valor;
+	
+	}
 
 }

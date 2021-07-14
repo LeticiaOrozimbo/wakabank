@@ -162,16 +162,29 @@ public class Programa {
 				case 3: // terminar quando aprendermos list
 					System.out.println("\n Digite o valor deseja sacar:  ");
 					double valorSaque = leia.nextDouble();
-					
+
 					if (contaEmpresa != null) {
 						contaEmpresa.Saque(valorSaque);
 					} else {
 						contaFisica.Saque(valorSaque);
 					}
-					
+
 					break;
 
-				case 4: // dicas financeiras
+				case 4:
+					System.out.println("\n Digite o valor que deseja doar:  ");
+					double valorDoacao = leia.nextDouble();
+					if (contaEmpresa != null) {
+						System.out.println("\nVocê doou " + valorDoacao
+								+ " e o WakaBank adicionou um bônus de 50%. A instituição parceira Generation irá receber um valor de:  "
+								+ df.format(contaEmpresa.Doacao(valorDoacao)));
+					} else {
+						System.out.println("\nVocê doou " + valorDoacao
+								+ " e o WakaBank adicionou um bônus de 25%. A instituição parceira Generation irá receber um valor de:  "
+								+ df.format(contaFisica.Doacao(valorDoacao)));
+					}
+					break;
+				case 5: // dicas financeiras
 
 					System.out.println("\n DICAS FINANCEIRAS "
 							+ "\nMÉTODO DO 50 30 20 - Equilibre suas finanças por meio deste método financeiro "
@@ -185,7 +198,7 @@ public class Programa {
 					System.out.println(
 							"\n\n Uma dica: se você conseguir gardar os 20% de investimentos durante um ano, esse seriam seus ganhos: "
 									+ df.format((contaEmpresa.getSaldo() * 0.2) * 12));
-
+					break;
 				default:
 					System.out.println(" ");
 

@@ -7,6 +7,8 @@ public interface FuncoesConta {
 	
 	//Método saque com um parametro para receber um valor
 	public double Saque(double valor);
+	//Método de doação para instituições que o WakaBank apoia 
+	public double Doacao(double valor);
 	
 	//Métodos getters e setters obrigatorios para todas as contas
 	public int getNumConta();
